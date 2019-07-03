@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Baby dice roller. pls be gentle, bitch.
+  form(method='POST' action='/roll')
+    div.form-group
+      label(for='num_dice') Number of Dice:
+        input#num_dice(name='num_of_dice' type='text', value='number of dice') 
+      button.btn.btn-primary(type='submit') Fuck!
