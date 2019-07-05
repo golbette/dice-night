@@ -2,9 +2,23 @@ extends layout
 
 block content
   h1= title
-  p Baby dice roller. pls be gentle, bitch.
+  p Baby dice roller. pls be gentle,.
   form(method='POST' action='/roll')
     div.form-group
       label(for='num_dice') Number of Dice:
-        input#num_dice(name='num_of_dice' type='text', value='number of dice') 
-      button.btn.btn-primary(type='submit') Fuck!
+        input#num_dice(name='num_of_dice' type='text', value='number of dice')
+      label(for='dice_size') d
+        select#dice_size(name='dice_size' type='text', value='')
+          option(value='0') -- Select --
+          option(value='2') 2
+          option(value='4') 4
+          option(value='6') 6
+          option(value='8') 8
+          option(value='12') 12
+          option(value='100') 100
+      button.btn.btn-primary(type='submit') Roll!
+  h5(style='margin-bottom:1px') Results:
+  div.result-area(style='border:2px solid black;background-color:dark grey')
+    p 420, 69, (this is test text)
+    
+  

@@ -10,6 +10,7 @@ router.get('/', function(req, res) {
 /* handle POST request*/
 router.post('/', function(req, res) {
     var num_dice = req.body.num_of_dice;
+    var dice_size = req.body.dice_size;
 
     //lazy baby input validation for lazy babies
     if(isNaN(num_dice)){
@@ -20,7 +21,7 @@ router.post('/', function(req, res) {
 
     //ROLL 'EM
     for(i = 0; i < num_dice; i++){
-      var randNum = Math.floor(Math.random() * Math.floor(6));
+      var randNum = Math.floor(Math.random() * Math.floor(dice_size))+1;
 
       if (i < num_dice-1)
         result = result + randNum + ',';
