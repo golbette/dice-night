@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Baby dice roller. pls be gentle,.
+  p Enter the number of dice and select the type of die below...
   form(method='POST' action='/roll')
     div.form-group
       label(for='num_dice') Number of Dice:
@@ -18,7 +18,8 @@ block content
           option(value='100') 100
       button.btn.btn-primary(type='submit') Roll!
   h5(style='margin-bottom:1px') Results:
-  div.result-area(style='border:2px solid black;background-color:dark grey')
-    p 420, 69, (this is test text)
+  div.result-area(style='border:2px solid black;background-color:dark grey,min-width:1000px')
+      ul 
+        p=results
     
   
